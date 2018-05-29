@@ -1,0 +1,34 @@
+GitForcePush -- Puneet Johal, Ricky Lin, Kathleen Wong
+APCS2 pd2
+Final Project Proposal
+2018-05-29
+
+Pokemon
+
+Objectives:
+- To explore different environments to catch new Pokemon
+- To train your Pokemon and become gym leader
+- To catch em all
+
+We plan to make use of:
+- Superclasses and subclasses for different kinds of Pokemon and their evolutions
+- Processing to develop graphics
+- Tree data structure for evolution trees
+- ArrayLists to store stats and other List-type data, such as the Pokedex
+
+At minimum our goal is to:
+- Have at least four different environments for the player to explore and at least one evolution chain of Pokemon that can be found in each
+- Have a hospital where the player can heal their Pokemon and a gym where they can battle their Pokemon
+- Make use of graphics to show an actual player moving across the screen and into different environments
+
+Extras:
+- Fully fleshed out battles with Pokemon encountered in the wild and in gyms, where you can chose attacks and powerups
+- Menus for the Pokedex, hospital, and gym
+- More pokemon and more environments
+- A storyline
+- Increased chances to encounter and catch certain Pokemon in the wild the better you have trained your Pokemon
+- Game ends when you catch em all
+
+Backup ideas for our backup idea:
+- Rebuild game - trying to take back land from zombies and expanding your survivor camp by allocated resources to different tasks
+- Tower defense style game - like bloons
