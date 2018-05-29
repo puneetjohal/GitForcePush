@@ -1,0 +1,34 @@
+GitForcePush -- Puneet Johal, Ricky Lin, Kathleen Wong
+APCS2 pd2
+Final Project Proposal
+2018-05-29 T
+
+(possibly a parody of) Plants vs. Zombies
+Objective:
+- to defend your house against the zombies using plants that shoot seeds at them
+- upgrade your plants to defend your garden against more and more powerful waves of zombies by using in-game currency (sun energy)
+- collect experience with each wave and use it to level up power attacks (tentatively)
+
+We plan to make use of:
+- Superclasses and subclasses for specific types of plants and specific types of zombies
+- Processing to develop graphics
+- Tree data structure for skill tree
+- ArrayLists to store game history and stats
+
+At minimum our goal is to:
+- Have functioning graphics where zombies move across the screen and plants in the garden shoot at them and deplete their health, after which they die and disappear from the screen
+- Have at least 5 waves of zombies that get progressively harder
+- Have at least 3 different types of plants and three different types of zombies
+- Have sun energy that replenishes as you play and can be used to upgrade your plants
+
+Extras:
+- Day/night mode
+- Lawnmower as a final defense that gives you one more chance if zombies do make it to your house
+- Skill tree + power attacks / power-ups 
+- Extra graphics and developed storyline
+
+
+Backup ideas:
+- Zombie FPS - Protecting your camp from waves of zombies using a watergun. You use your mouse to aim and click to fire, and press space to zoom.
+
+- Pokemon - very simplified version of Pokemon where you can catch, train, and battle pokemon
