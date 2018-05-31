@@ -12,4 +12,4 @@ APCS2 Pd2
 # To Do List #
 * Flowchart
 * UML diagram
-* Pokemon.java creates world + sets up environment and player objects
+* Pokemon.pde creates world + sets up environment and player objects - starts the game
