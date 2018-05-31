@@ -1,8 +1,8 @@
 # GitForcePush - Puneet Johal, Ricky Lin, Kathleen Wong
-APCS2 Pd2 
+APCS2 Pd2
 
 
-# Overview # 
+# Overview #
 
 
 # How to Use #
@@ -10,8 +10,6 @@ APCS2 Pd2
 
 
 # To Do List #
-
-
-
-
-
+* Flowchart
+* UML diagram
+* Pokemon.java creates world + sets up environment and player objects

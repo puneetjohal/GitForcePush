@@ -41,6 +41,9 @@ blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 >
 - Still need a project
+- How will we collect pokéballs?
+- How will the gym work?
+- Powerups?
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,7 +90,7 @@ Kathleen :: Fixed proposal format
 
 2018-05-30
 --------------------------------------------------------------
-Puneet :: Fixed proposal
+Puneet :: Fixed proposal, added plan
 Ricky :: Initialized README with overview and to-do
 ==============================================================
 
