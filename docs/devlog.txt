@@ -96,5 +96,5 @@ Ricky :: Initialized README with overview and to-do
 
 2018-05-31
 --------------------------------------------------------------
-Kathleen :: Added uml
+Kathleen :: Added uml, flowchart
 ==============================================================
