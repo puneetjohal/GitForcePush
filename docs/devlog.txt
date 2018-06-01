@@ -98,3 +98,10 @@ Ricky :: Initialized README with overview and to-do
 --------------------------------------------------------------
 Kathleen :: Added uml, flowchart
 ==============================================================
+
+2018-06-01
+--------------------------------------------------------------
+Ricky :: Updated plan, uml, and flowchart 
+Kathleen :: Updated plan, uml, and flowchart 
+==============================================================
+
