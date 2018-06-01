@@ -1,0 +1,77 @@
+Tasks (from highest priority to least)
+- Create the background environment
+	- design gym, poke mart, hospital, grass
+	- design character model
+	- find out how to import Pokemon pictures
+
+Necessary for core functionality:
+- Playing environment (prereq)
+  - Open world / Kanto Region
+  - Shop
+  - Hospital
+  - Gym
+- Movable character (prereq)
+  - WASD / up-down-left-right arrow keys
+  - Click to select options that pop up
+- Pokémon superclass (prereq)
+  - Subclasses for each basic pokémon
+  - Subclasses for the evolutions of those pokémon
+- Inventory
+  - Pokéballs
+  - Pokémon dollars
+- Exploring
+  - Random chance of encountering pokémon
+- Battles (prereq)
+  - Battle with pokémon in the wild to catch them
+  - Battle with pokémon in the gym to progress to win
+  - Order of sending pokémon is decided by a sort
+  - Player can choose attacks, throw pokéballs
+  - Win poke dollars if you win battle
+  - Chance for opponent pokémon to flee in the wild
+- Shop
+  - Use pokémon dollars to buy pokéballs 
+- Hospital
+  - Walk in to heal for a price
+- Gym
+  - Fight with gym leader
+	- Win game if you beat leader (end game)
+
+Extras:
+- Pokédex with fancy graphics
+  - Color pictures of the pokémon that have been caught and silhouettes of those that haven't
+- HUD / status bar
+  - Shows xp / level
+  - Option to view inventory
+  - Shows character + name
+- Experience (prereq)
+  - Collected after each battle unless you flee + from other actions
+  - Shown in status bar
+- Evolution
+  - Ability to evolve pokémon based on xp
+  - Gives pokémon more HP + new attacks
+  - Unlock a move
+ 
+
+
+-------------------------------------------------------------------------------
+
+Delegated tasks:
+Puneet - show up to class
+Ricky - work on buildings
+Kathleen - work on rest of background / character
+
+Collab tasks:
+- Make sure code works
+- Play game to ensure runability
+- Begin driver class
+
+-------------------------------------------------------------------------------
+
+Timeline:
+2018-06-04 M - Get a moving character on a screen, set up exploring environments + buildings
+
+2018-06-06 W - Have all pokemon created and have functionalities of buildings ready
+
+2018-06-07 T - Battles done , test game
+
+2018-06-08 F - Be Done
