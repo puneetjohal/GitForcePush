@@ -105,3 +105,8 @@ Ricky :: Updated plan, uml, and flowchart
 Kathleen :: Updated plan, uml, and flowchart 
 ==============================================================
 
+2018-06-03
+--------------------------------------------------------------
+Kathleen :: Added png pictures for pokemons and buildings
+==============================================================
+
