@@ -1,5 +1,4 @@
 import java.util.Map;
-PImage front, back, left, right;
 
 class Player {
   
