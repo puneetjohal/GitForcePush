@@ -13,4 +13,7 @@ void draw(){
   world.draw();
   ash.move();
   ash.display();
+
+void setup(){
+  size(600,600);
 }
