@@ -1,0 +1,112 @@
+GitForcePush
+Puneet Johal
+Ricky Lin
+Kathleen Wong
+pd 2
+---------------------
+<Project>
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+USAGE:
+* Replace all fields, angle brackets included, with specified info.
+  eg, pd <pd#> --> pd 3
+* Delete these instructions once all teammates understand usage.
+  (from tilde bar above to tilde bar below)
+
+devlog--
+Use keyboard shortcut to jump to end,
+ replicate entry template,
+ modify appropriately.
+
+zone of reflection--
+Flesh out each category whenever necessary, appropriate.
+ Need not be fully filled in until end of project,
+ but best done as you go along.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<Wow, we so BOSS bc...>
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<
+blah blah pesky bug...
+maybe some of these will move into the Obs.Ovrcm section...
+>
+- Still need a project
+- How will we collect pokéballs?
+- How will the gym work?
+- Powerups?
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<wow! oo! etc!...>
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We changed ___ to ___ bc...
+<etc>
+<etc>
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<tales of wisdom gained...>
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
+2018-05-29
+--------------------------------------------------------------
+Puneet, Ricky, and Kathleen :: Brainstormed ideas
+Puneet :: Wrote up proposals
+Kathleen :: Fixed proposal format
+==============================================================
+
+2018-05-30
+--------------------------------------------------------------
+Puneet :: Fixed proposal, added plan
+Ricky :: Initialized README with overview and to-do
+==============================================================
+
+2018-05-31
+--------------------------------------------------------------
+Kathleen :: Added uml, flowchart
+==============================================================
+
+2018-06-01
+--------------------------------------------------------------
+Ricky :: Updated plan, uml, and flowchart 
+Kathleen :: Updated plan, uml, and flowchart 
+==============================================================
+
+2018-06-03
+--------------------------------------------------------------
+Kathleen :: Added png pictures for pokemons and buildings
+==============================================================
+

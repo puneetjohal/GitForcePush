@@ -1,0 +1,79 @@
+Tasks (from highest priority to least)
+
+- Getting a green light on the proposal
+- Flowchart
+- UML diagrams
+
+Necessary for core functionality:
+- Playing environment (prereq)
+  - Open world / Kanto Region
+  - Shop
+  - Hospital
+  - Gym
+- Movable character (prereq)
+  - WASD / up-down-left-right arrow keys
+  - Click to select options that pop up
+- Pokémon superclass (prereq)
+  - Subclasses for each basic pokémon
+  - Subclasses for the evolutions of those pokémon
+- Pokédex (prereq)
+  - Shows all pokémon found + stats (HP, attack power, etc)
+  - Shows how many types found out of the total
+- Inventory
+  - Pokédex
+  - Pokéballs
+  - Potions
+  - Pokémon dollars
+- Exploring
+  - Random chance of encountering pokémon, lower chance with more rarer pokémon
+- Battles (prereq)
+  - Battle with pokémon in the wild to catch them
+  - Battle with pokémon in the gym to progress and capture the gym from the leader
+  - Options to send and recall pokémon, choose attacks, use potions, throw pokéballs, and flee
+  - Collect pokémon dollars after each battle unless you flee
+  - Chance for opponent pokémon to flee in the wild
+- Shop
+  - Use pokémon dollars to buy pokéballs and potions
+- Hospital
+  - Can leave your pokémon here to heal
+- Gym
+  - Win four prelim battles to fight with gym leader
+
+Extras:
+- Pokédex with fancy graphics
+  - Color pictures of the pokémon that have been caught and silhouettes of those that haven't
+- HUD / status bar
+  - Shows xp / level
+  - Option to view inventory
+  - Shows character + name
+- Experience (prereq)
+  - Collected after each battle unless you flee + from other actions
+  - Shown in status bar
+- Evolution
+  - Ability to evolve pokémon based on xp
+  - Gives pokémon more HP + new attacks
+  - Forced to remove access to one attack if > 4 available
+- Team Rocket
+  - Random chance to encounter in the wild
+  - Battle
+
+-------------------------------------------------------------------------------
+
+Delegated tasks:
+Puneet - wait for a green light
+Ricky - wait for a green light
+Kathleen - grow taller
+
+Collab tasks:
+- Wait for a green light
+- Update to-do
+- Decide on the general layout of the game (more specfics on how the game will work, how the menus will look, etc.)
+
+-------------------------------------------------------------------------------
+
+Timeline:
+2018-06-04 M - Get a moving character on a screen, set up exploring environments + buildings, even if not yet functioning, start setting up Pokemon classes
+
+2018-06-08 F - Finish Pokédex, add battling functionality while exploring + at the gym, add healing options at hospital, add experience tracker + evolution functionality
+
+2018-06-11 M - Fix up graphics, add extra features
