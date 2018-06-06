@@ -1,8 +1,11 @@
 class PlayingScreen {
 
-  PImage gym, pokeCenter, pokeMart, tree;
-  
+  PImage gym, pokeCenter, pokeMart, tree,grass;
+  int x,y;
+   
   PlayingScreen(){
+    grass = loadImage("grass.png");
+    grass.resize(20,20);
     gym = loadImage("gym.png");
     pokeCenter = loadImage("hospital.png");
     pokeMart = loadImage("shop.png");
@@ -14,6 +17,7 @@ class PlayingScreen {
   }
       
   void draw() {
+    grassFill();
     //horizontal road
     fill(198,140,83);
     noStroke();
@@ -33,12 +37,19 @@ class PlayingScreen {
     placeBuildings();
   }
   
+  void grassFill(){
+    for(int x= 0; x<800 ;x+=20){
+      for(int y= 0; y<800 ;y+=20){
+        image(grass,x,y);
+      }
+    }
+  }
   void placeBuildings(){
     imageMode(CORNER);
     image(pokeCenter, 50, 50);
     image(pokeMart, 400, 75);
     image(gym, 465, 478);
-    image(tree, 75, 485);
+    //image(tree, 75, 485);
   }
 
 }
