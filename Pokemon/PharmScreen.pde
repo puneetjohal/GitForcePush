@@ -4,18 +4,18 @@ class PharmScreen{
   String s, mon;
   
   PharmScreen(Player x){
-    ash = loadImage("fash.png");
-    ash.resize(50,50);
+    //ash = loadImage("fash.png");
+   // ash.resize(50,50);
     s = x.pokeBalls + "";
     mon= x.pokeDollars + "";
   }
   
   void draw(){
-     
     background(51);
     rect(50,50,375,200,20,20,20,20);
     rect(50,300,375,200,20,20,20,20);
     rect(450,300,125,200,5,5,5,5);
+    rect(450,50,125,50,5,5,5,5);
     fill(135,206,235);
     display();
   
@@ -37,9 +37,10 @@ class PharmScreen{
     text(s,475,375);
     text("Money Left",475,430);
     text(mon,475,455);
+    text("EXIT", 500,75);
     fill(0, 102, 153);
    //fill(255,255,255);
-    image(ash, 525 ,100);
+  //  image(ash, 525 ,100);
   }
   
 }
