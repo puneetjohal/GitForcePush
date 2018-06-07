@@ -4,6 +4,8 @@ class Player {
   
   int x;
   int y;
+  int pokeBalls;
+  int pokeDollars;
   String name;
   //Hashmap inventory;
   PImage front, back, left, right, face;

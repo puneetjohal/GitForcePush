@@ -12,9 +12,9 @@ abstract class Monsters {
     return hp;
   }
   
-  int setHp( int new ) {
-    hp = new;
+  void setHp( int x ) {
+    hp = x;
   }
   
-  int getString
+  //int getString{
 }
