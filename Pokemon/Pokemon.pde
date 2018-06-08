@@ -9,6 +9,7 @@ void setup(){
   ash = new Player();
   world = new PlayingScreen();
   shop = new PharmScreen(ash);
+  //_monsters.enqueue(Charmander);
 }
 
 void draw(){

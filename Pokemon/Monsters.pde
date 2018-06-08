@@ -10,7 +10,7 @@ abstract class Monsters {
   protected String move1, move2, move3, move4;
   protected int lev, type; 
   protected PImage front, back;
-  protected boolean wild?; 
+  protected boolean wild;
 
   //Accessors 
 
@@ -62,8 +62,8 @@ abstract class Monsters {
     return back;
   }
 
-  boolean getWild?() {
-    return wild?;
+  boolean getWild() {
+    return wild;
   }
 
   //Mutators
@@ -110,9 +110,9 @@ abstract class Monsters {
     return temp;
   }
 
-  boolean setWild?( boolean newWild? ) {
-    boolean temp = wild?;
-    wild? = newWild?;
+  boolean setWild( boolean newWild ) {
+    boolean temp = wild;
+    wild = newWild;
     return temp;
   }
 

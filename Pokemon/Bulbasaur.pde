@@ -13,6 +13,11 @@ class Bulbasaur extends Monsters {
     back = loadImage("bbulbasaur.png");
   }
   
+  void evolve(){
+    
+  }
+  
+  
   
   
   

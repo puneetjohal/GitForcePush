@@ -13,8 +13,9 @@ class Charmander extends Monsters {
     back = loadImage("bcharmander.png");
   }
   
-  
-  
+  void evolve(){
+    Charmeleon();
+  }
   
   
 }

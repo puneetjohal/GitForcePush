@@ -4,10 +4,11 @@ class Pikachu extends Monsters {
     hp = 200;
     atk = 50;
     def = 50;
+  }
     
   
   
   
-  
+
   
 }
