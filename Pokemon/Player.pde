@@ -2,7 +2,6 @@ class Player {
   
   int x;
   int y;
-  int pokeBalls,pokeDollars;
   String name;
   PImage front, back, left, right, face;
   boolean shop, hospital, gym;
