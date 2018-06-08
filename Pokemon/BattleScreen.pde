@@ -5,7 +5,7 @@ class BattleScreen {
   String name, s1, s2, s3, s4, moveChosen;
   Queue input;
 
-  BattleScreen(Queue x, Stack y) {
+  BattleScreen(Queue x, LLStack<Monsters> y) {
     background = loadImage("battle.png");
     background.resize(600, 400);
     mine = x.dequeue();
@@ -22,11 +22,13 @@ class BattleScreen {
 
   void draw() {
 
-    rect(0, 400, 300, 200, 10, 10, 10, 10);
-    rect(300, 400, 150, 100, 10, 10, 10, 10);
-    rect(450, 400, 150, 100, 10, 10, 10, 10);
-    rect(300, 500, 150, 100, 10, 10, 10, 10);
-    rect(450, 500, 150, 100, 10, 10, 10, 10);
+  rect(0,400,300,200,10,10,10,10);
+    rect(300,400,150,66,10,10,10,10);
+    rect(450,400,150,66,10,10,10,10);
+    rect(300,466,150,66,10,10,10,10);
+    rect(450,466,150,66,10,10,10,10);
+    rect(300,532,150,66,10,10,10,10);
+    rect(450,532,150,66,10,10,10,10);
     display();
   }
 
@@ -53,18 +55,19 @@ class BattleScreen {
   }
 
   void mouseClicked() {
-    if (mouseX>300 && mouseX<450 && mouseY>400 && mouseY<500) {
-      moveChosen = s1;
-    }
-    if (mouseX>450 && mouseX<600 && mouseY>400 && mouseY<500) {
-      moveChosen = s2;
-    }
-    if (mouseX>300 && mouseX<450 && mouseY>500 && mouseY<600) {
-      moveChosen = s3;
-    }
-    if (mouseX>450 && mouseX<600 && mouseY>500 && mouseY<600) {
-      moveChosen = s4;
-    }
+   if(mouseX>300 && mouseX<450 && mouseY>400 && mouseY<466){
+      moveChosen =s1;}
+     if(mouseX>450 && mouseX<600 && mouseY>400 && mouseY<466){
+      moveChosen =s2;}
+      if(mouseX>300 && mouseX<450 && mouseY>466 && mouseY<532){
+      moveChosen =s3;}
+      if(mouseX>450 && mouseX<600 && mouseY>466 && mouseY<532){
+      moveChosen =s4;}
+      if(mouseX>300 && mouseX<450 && mouseY>532 && mouseY<600){
+      moveChosen ="catch";}
+      if(mouseX>450 && mouseX<600 && mouseY>532 && mouseY<600){
+      moveChosen ="run";}
+    
   }
 
   String getMove() {

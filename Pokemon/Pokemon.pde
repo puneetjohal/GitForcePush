@@ -1,36 +1,4 @@
-<<<<<<< HEAD
-Player ash;
-PlayingScreen world;
-PharmScreen shop;
-BattleScreen battle;
 
-private Queue<Monsters> _monsters; 
-private Stack<Monsters> _opponents;
-
-void setup(){
-  size(600,600);
-  ash = new Player();
-  world = new PlayingScreen();
-  shop = new PharmScreen(ash);
-  battle = new BattleScreen(_monsters);
-}
-
-void draw(){
-  background(102,225,102);
-  world.draw();
-  ash.move();
-  ash.display();
-  if(ash.atShop()){
-    shop.draw();
-  }
-  if(ash.atGym()){
-  clear();
-  battle.draw();
-}
-
-  void popup()
-}
-=======
 Player ash;
 PlayingScreen world;
 PharmScreen shop;
@@ -39,7 +7,7 @@ BattleScreen battle;
 static String currentScreen;
 
 protected Queue<Monsters> _monsters; 
-protected Stack<Monsters> _wild;
+protected LLStack<Monsters> _wild;
 
 void setup() {
   currentScreen = "game";
@@ -48,6 +16,7 @@ void setup() {
   world = new PlayingScreen();
   shop = new PharmScreen(ash);
   battle = new BattleScreen(_monsters, _wild);
+ 
 }
 
 void draw() {
@@ -62,4 +31,28 @@ void draw() {
     battle.draw();
   }
 }
->>>>>>> 35bbd98f2dfe473341a27c83ccb9cb0610627fac
+
+  void addWild(){
+    _wild.push(new Machamp());
+    _wild.push(new Ivysaur(true));
+     _wild.push(new Blastoise());
+    _wild.push(new Charizard());
+    _wild.push(new Pidgeotto(true));
+     _wild.push(new Machoke(true));
+     _wild.push(new Charmeleon(true));
+    _wild.push(new Pidgeot());
+    _wild.push(new Wartortle(true));
+    _wild.push(new Venusaur());
+    _wild.push(new Golem());
+     _wild.push(new Machamp());
+    _wild.push(new Graveler(true));
+    _wild.push(new Bulbasaur(true));
+    _wild.push(new Geodude(true));
+    _wild.push(new Charmander(true));
+    _wild.push(new Pikachu());
+    _wild.push(new Squirtle(true));
+    _wild.push(new Golem());
+    _wild.push(new Machop(true));
+    _wild.push(new Pidgey(true));
+   
+  }
