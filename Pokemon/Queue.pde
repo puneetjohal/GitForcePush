@@ -1,7 +1,7 @@
-class Queue<Quasar>
+class Queue<Monster>
 {
-  LLNode<Quasar> _front;
-  LLNode<Quasar> _back;
+  LLNode<Monsters> _front;
+  LLNode<Monsters> _back;
   int _size;
 
   public Queue()
@@ -13,9 +13,9 @@ class Queue<Quasar>
 
   //means of removing an element from collection:
   //Dequeues and returns the first element of the queue.
-  public Quasar dequeue()
+  public Monsters dequeue()
   {
-    LLNode<Quasar> temp = _front;
+    LLNode<Monsters> temp = _front;
     if (_size == 0)
       return null;
 
@@ -34,9 +34,9 @@ class Queue<Quasar>
 
   //means of adding an element to collection:
   //Enqueue an element onto the back of this queue.
-  public void enqueue( Quasar x )
+  public void enqueue( Monsters x )
   {
-    LLNode<Quasar> temp = new LLNode<Quasar>(x, null);
+    LLNode<Monsters> temp = new LLNode<Monsters>(x, null);
     if (_size == 0)
     {
       _front = temp;
@@ -57,7 +57,7 @@ class Queue<Quasar>
   }
 
   //Returns the first element of the queue without dequeuing it.
-  public Quasar peekFront()
+  public Monsters peekFront()
   {
     return _front.getValue();
   }
