@@ -4,6 +4,7 @@ class Player {
   
   int x;
   int y;
+  int pokeBalls,pokeDollars;
   String name;
   //Hashmap inventory;
   PImage front, back, left, right, face;
@@ -11,6 +12,8 @@ class Player {
   Player(){
     x = 20;
     y = 300;
+    pokeBalls=0;
+    pokeDollars=0;
     front = loadImage("fash.png");
     back = loadImage("bash.png");
     left = loadImage("lash.png");
