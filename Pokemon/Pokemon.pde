@@ -1,6 +1,5 @@
 Player ash;
 PlayingScreen world;
-PharmScreen shop;
 BattleScreen battle;
 static int pokeDollars, pokeBalls,s;
 boolean shop, hospital;
@@ -17,7 +16,6 @@ void setup() {
   pokeBalls = 5; 
   ash = new Player();
   world = new PlayingScreen();
-  shop = new PharmScreen(ash);
   popup();
   starter();
   battle = new BattleScreen(_monsters, _wild);
