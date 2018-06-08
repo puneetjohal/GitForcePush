@@ -6,23 +6,27 @@ abstract class Monsters {
   final int ROCK = 4;
   final int FLYING = 5; 
 
-  protected float hp, atk, def, exp;
+  protected float hp, maxHp, atk, def, exp;
   protected String move1, move2, move3, move4;
-  protected int lev, type; 
+  protected int type; 
   protected PImage front, back;
-  protected boolean wild;
+  protected boolean wild; 
 
   //Accessors 
 
   float getHp() {
     return hp;
   }
+  
+  float getMaxHp() {
+    return maxHp;
+  }
 
   float getAtk() {
     return atk;
   }
 
-  float getdDef() {
+  float getDef() {
     return def;
   }
 
@@ -44,10 +48,6 @@ abstract class Monsters {
 
   String getMove4() {
     return move4;
-  }
-
-  int getLev() {
-    return lev;
   }
 
   int getType() {
@@ -104,12 +104,6 @@ abstract class Monsters {
     return temp;
   }
 
-  int setLev( int newLev ) {
-    int temp = lev;
-    lev = newLev;
-    return temp;
-  }
-
   boolean setWild( boolean newWild ) {
     boolean temp = wild;
     wild = newWild;
@@ -117,7 +111,7 @@ abstract class Monsters {
   }
 
   //Type Effectiveness Check
-  float typeMultiplier ( Monsters other ) {
+  float typeMultiplier( Monsters other ) {
     if ((this.type == GRASS && other.getType() == WATER) ||
       (this.type == WATER && other.getType() == FIRE) ||
       (this.type == FIRE && other.getType() == GRASS) ||
@@ -137,9 +131,37 @@ abstract class Monsters {
     }
   }
 
-    //Attack method 
+  //Attack method 
+  String attack (Monsters other, String command) {
+    
+    float dmg = 0; 
+    float multi = typeMultiplier(other);
+    String effect = "";
+    
+    if ( command.equals("Tackle") || command.equals("Headbutt") || command.equals("Scratch") ) {
+      dmg = ( (.2 + multi ) * atk ) - (0.5 *( other.getDef()) );
+      other.setHp( other.getHp() - dmg ); 
+    }
+    else if (command.equals("Flamethrower") || command.equals("Aerial Ace") || command.equals("Water Gun") || command.equals("Jump Kick") || command.equals("Razor Leaf") || command.equals("Rock Slide") ) {
+      dmg = ( (.5 + multi ) * atk ) - (0.5 * ( other.getDef()) );
+      other.setHp( other.getHp() - dmg );     }
+    else if (command.equals("Inferno") || command.equals("Brave Bird") || command.equals("Hydro Pump") || command.equals("Close Combat") || command.equals("Solar Beam") || command.equals("Earthquake") ) {
+      dmg = ( (1 + multi ) * atk ) - (0.5 * ( other.getDef()) );
+      other.setHp( other.getHp() - dmg );     }
+    else if (command.equals("Growl") || command.equals("Tail Whip") || command.equals("Scary Face") ) {
+      other.setAtk( other.getAtk() * .7 );
+      other.setDef( other.getDef() * .7 );
+      return "You used " + command + " and lowered the enemy's stats";
+    } 
+    if (multi > 1.0) {
+      effect = "super effective";
+    }
+    else if (multi < 1.0) {
+      effect = "not effective";
+    }
+    return "You used " + command + " which is " + effect + " to deal " + dmg + " damage";  
+  }
   
-
     //To Be Implemented methods
     abstract void evolve();
-  }
+}
