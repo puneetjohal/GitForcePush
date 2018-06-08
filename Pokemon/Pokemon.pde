@@ -2,7 +2,7 @@ Player ash;
 PlayingScreen world;
 BattleScreen battle;
 static int pokeDollars, pokeBalls, s;
-boolean shop, hospital;
+boolean shop, hospital, battle;
 
 static String currentScreen;
 
@@ -23,7 +23,7 @@ void setup() {
   popup();
   battle = new BattleScreen(_monsters, _wild);
   s = second();
-  shop = hospital = false;
+  shop = hospital = battle = false;
 }
 
 void draw() {
@@ -35,14 +35,29 @@ void draw() {
     delay(3000);
     hospital = false;
   }
-  if (currentScreen.equals("game")) {
+  if (battle) {
+    delay(3000);
+    battle = false;
+  }
+  if (ash.getHP() < 0){
+    background(0,0,0);
+    fill(255,255,255);
+    textSize(30);
+    text("You are dead...", 135,135);
+    noLoop();
+  }
+  //if (currentScreen.equals("game")) {
     background(102, 225, 102);
     world.draw();
     ash.move();
     ash.display();
     shop = ash.atShop();
     hospital = ash.atHospital();
+    if (random(50) == 0){
+      battle = true;
+    }
     if (shop) {
+      battle = false;
       if (ash.getPokeDollars() > 50) {
         ash.addPokeBalls(ash.getPokeDollars()/50);
         ash.addPokeDollars(-(ash.getPokeDollars() - (ash.getPokeDollars()%50)));
@@ -51,14 +66,37 @@ void draw() {
       shopText();
     }
     if (hospital) {
+      battle = false;
       ash.heal();
       ash.setXY(85, 135);
       hospitalText();
     }
-  }
- else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
+    
+    if (battle) {
+      num = random(0,3);
+      String poke;
+      if (num == 0){ poke = "Squirtle";}
+      if (num == 1){ poke = "Charmander";}
+      if (num == 2){ poke = "Bulbasaur";}
+      boolean win = false;
+      if (random(3) == 0){
+        win = true;
+      }
+      if (win) {
+        pokeDollars += 30;
+        pokeBalls -= 1;
+        ash.lowerHp(random(10));
+      }
+      else {
+        pokeDollars += 10;
+        ash.lowerHP(random(20));
+      }
+      battleText(poke, win);
+  //}
+ /*else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
   battle.draw();
 }
+*/
 }
 void shopText() {
   fill(255, 255, 255);
@@ -74,6 +112,21 @@ void hospitalText() {
   text("Thanks for visiting the PokeCenter", 10, 30);
   text("Your pokemon now all have full hp", 10, 70);
 }
+
+void battleText(String s, boolean b) {
+  fill(255, 255, 255);
+  textSize(30);
+  text("You had a battle with " + s, 10 30);
+  if (b){
+    text(s + " was captured!", 10, 70);
+    text("HP: " + ash.getHP(), 10 110);
+  }
+  else{
+    text(s + " ran away", 10, 70);
+    text("HP: " + ash.getHP(), 10 110);
+  }
+}
+
 void addWild() {
   _wild.push(new Machamp());
   _wild.push(new Ivysaur(true));

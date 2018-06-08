@@ -2,6 +2,7 @@ class Player {
   
   int x;
   int y;
+  int HP;
   String name;
   PImage front, back, left, right, face;
   boolean shop, hospital, gym;
@@ -9,8 +10,6 @@ class Player {
   Player(){
     x = 20;
     y = 300;
-    pokeBalls=10;
-    pokeDollars=100;
     front = loadImage("fash.png");
     back = loadImage("bash.png");
     left = loadImage("lash.png");
@@ -23,6 +22,7 @@ class Player {
     shop = false;
     hospital = false;
     gym = false;
+    HP = 100;
   }
   
   void display(){
@@ -117,7 +117,15 @@ class Player {
   }
   
   void heal(){
-    //l
+    HP = 100;
+  }
+  
+  void decreaseHP(int x){
+    HP += x;
+  }
+  
+  int getHP(){
+    return HP;
   }
   
 }
