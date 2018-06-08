@@ -5,12 +5,13 @@ abstract class Monsters {
   final int FIGHTING = 3;
   final int ROCK = 4;
   final int FLYING = 5; 
-  
+
   protected float hp, atk, def, exp;
   protected String move1, move2, move3, move4;
   protected int lev, type; 
   protected PImage front, back;
-  
+  protected boolean wild?; 
+
   //Accessors 
 
   float getHp() {
@@ -48,7 +49,7 @@ abstract class Monsters {
   int getLev() {
     return lev;
   }
-  
+
   int getType() {
     return type;
   }
@@ -59,6 +60,10 @@ abstract class Monsters {
 
   PImage getBack() {
     return back;
+  }
+
+  boolean getWild?() {
+    return wild?;
   }
 
   //Mutators
@@ -105,8 +110,36 @@ abstract class Monsters {
     return temp;
   }
 
-  //To Be Implemented methods
-  abstract void attack();
-  abstract void levelUp();
-  abstract void evolve();
-}
+  boolean setWild?( boolean newWild? ) {
+    boolean temp = wild?;
+    wild? = newWild?;
+    return temp;
+  }
+
+  //Type Effectiveness Check
+  float typeMultiplier ( Monsters other ) {
+    if ((this.type == GRASS && other.getType() == WATER) ||
+      (this.type == WATER && other.getType() == FIRE) ||
+      (this.type == FIRE && other.getType() == GRASS) ||
+      (this.type == FIGHTING && other.getType() == ROCK) ||
+      (this.type == ROCK && other.getType() == FLYING ) ||
+      (this.type == FLYING && other.getType() == FIGHTING)) {
+      return 1.2;
+    } else if ((this.type == GRASS && other.getType() == FIRE) ||
+      (this.type == FIRE && other.getType() == WATER) ||
+      (this.type == WATER && other.getType() == GRASS) ||
+      (this.type == FIGHTING && other.getType() == FLYING) ||
+      (this.type == FLYING && other.getType() == ROCK ) ||
+      (this.type == ROCK && other.getType() == FIGHTING)) {
+      return 0.8;
+    } else {
+      return 1;
+    }
+  }
+
+    //Attack method 
+  
+
+    //To Be Implemented methods
+    abstract void evolve();
+  }
