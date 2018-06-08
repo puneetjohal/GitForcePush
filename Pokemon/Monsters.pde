@@ -132,11 +132,10 @@ abstract class Monsters {
   }
 
   //Attack method 
-  String attack (Monsters other, String command) {
+  void attack (Monsters other, String command) {
     
     float dmg = 0; 
     float multi = typeMultiplier(other);
-    String effect = "";
     
     if ( command.equals("Tackle") || command.equals("Headbutt") || command.equals("Scratch") ) {
       dmg = ( (.2 + multi ) * atk ) - (0.5 *( other.getDef()) );
@@ -151,15 +150,7 @@ abstract class Monsters {
     else if (command.equals("Growl") || command.equals("Tail Whip") || command.equals("Scary Face") ) {
       other.setAtk( other.getAtk() * .7 );
       other.setDef( other.getDef() * .7 );
-      return "You used " + command + " and lowered the enemy's stats";
     } 
-    if (multi > 1.0) {
-      effect = "super effective";
-    }
-    else if (multi < 1.0) {
-      effect = "not effective";
-    }
-    return "You used " + command + " which is " + effect + " to deal " + dmg + " damage";  
   }
   
     //To Be Implemented methods
