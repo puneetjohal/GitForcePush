@@ -38,16 +38,15 @@ class Queue<Monster>
   public void enqueue( Monsters x )
   {
     LLNode<Monsters> temp = new LLNode<Monsters>(x, null);
-    if (_size == 0)
+    if (_front == null && _back == null)
     {
       _front = temp;
       _back = temp;
     } else
     {
       _back.setNext(temp);
-      _back = temp;
+      _back = _back.getNext();
     }
-
     _size += 1;
   }
 

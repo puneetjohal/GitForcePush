@@ -1,7 +1,8 @@
 class Squirtle extends Monsters {
   
   Squirtle( boolean stat ) {
-    hp = random(10,20);
+    maxHp = random(10,20);
+    hp = maxHp;
     atk = random(1,10);
     def = random(5,10);
     exp = 0;

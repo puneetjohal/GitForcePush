@@ -112,19 +112,19 @@ abstract class Monsters {
 
   //Type Effectiveness Check
   float typeMultiplier( Monsters other ) {
-    if ((this.type == GRASS && other.getType() == WATER) ||
-      (this.type == WATER && other.getType() == FIRE) ||
-      (this.type == FIRE && other.getType() == GRASS) ||
-      (this.type == FIGHTING && other.getType() == ROCK) ||
-      (this.type == ROCK && other.getType() == FLYING ) ||
-      (this.type == FLYING && other.getType() == FIGHTING)) {
+    if ((this.getType() == GRASS && other.getType() == WATER) ||
+      (this.getType() == WATER && other.getType() == FIRE) ||
+      (this.getType() == FIRE && other.getType() == GRASS) ||
+      (this.getType() == FIGHTING && other.getType() == ROCK) ||
+      (this.getType() == ROCK && other.getType() == FLYING ) ||
+      (this.getType() == FLYING && other.getType() == FIGHTING)) {
       return 1.2;
-    } else if ((this.type == GRASS && other.getType() == FIRE) ||
-      (this.type == FIRE && other.getType() == WATER) ||
-      (this.type == WATER && other.getType() == GRASS) ||
-      (this.type == FIGHTING && other.getType() == FLYING) ||
-      (this.type == FLYING && other.getType() == ROCK ) ||
-      (this.type == ROCK && other.getType() == FIGHTING)) {
+    } else if ((this.getType() == GRASS && other.getType() == FIRE) ||
+      (this.getType() == FIRE && other.getType() == WATER) ||
+      (this.getType() == WATER && other.getType() == GRASS) ||
+      (this.getType() == FIGHTING && other.getType() == FLYING) ||
+      (this.getType() == FLYING && other.getType() == ROCK ) ||
+      (this.getType() == ROCK && other.getType() == FIGHTING)) {
       return 0.8;
     } else {
       return 1;
@@ -142,9 +142,10 @@ abstract class Monsters {
     float dmg = 0; 
     float multi = typeMultiplier(other);
 
-    if ( command.equals("Tackle") || command.equals("Headbutt") || command.equals("Scratch") ) {
+   // if ( command.equals("Tackle") || command.equals("Headbutt") || command.equals("Scratch") ) {
       dmg = ( (.2 + multi ) * atk ) - (0.5 *( other.getDef()) );
       other.setHp( other.getHp() - dmg );
+      /*
     } else if (command.equals("Flamethrower") || command.equals("Aerial Ace") || command.equals("Water Gun") || command.equals("Jump Kick") || command.equals("Razor Leaf") || command.equals("Rock Slide") ) {
       dmg = ( (.5 + multi ) * atk ) - (0.5 * ( other.getDef()) );
       other.setHp( other.getHp() - dmg );
@@ -154,7 +155,7 @@ abstract class Monsters {
     } else if (command.equals("Growl") || command.equals("Tail Whip") || command.equals("Scary Face") ) {
       other.setAtk( other.getAtk() * .7 );
       other.setDef( other.getDef() * .7 );
-    }
+    } */ 
   }
 
   //To Be Implemented methods

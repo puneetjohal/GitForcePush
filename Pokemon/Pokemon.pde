@@ -1,7 +1,8 @@
 Player ash;
 PlayingScreen world;
+PharmScreen shop;
 BattleScreen battle;
-static int pokeDollars, pokeBalls,s;
+static int pokeDollars, pokeBalls, s;
 boolean shop, hospital;
 
 static String currentScreen;
@@ -10,25 +11,29 @@ static Queue<Monsters> _monsters;
 static LLStack<Monsters> _wild;
 
 void setup() {
+  _monsters = new Queue<Monsters>();
+  _wild = new LLStack<Monsters>(); 
   currentScreen = "game";
   size(600, 600);
   pokeDollars = 500;
   pokeBalls = 5; 
   ash = new Player();
   world = new PlayingScreen();
-  popup();
+  shop = new PharmScreen(ash);
+  addWild();
   starter();
+  popup();
   battle = new BattleScreen(_monsters, _wild);
-  s=second();
+  s = second();
   shop = hospital = false;
 }
 
 void draw() {
-  if (shop){
+  if (shop) {
     delay(3000);
     shop = false;
   }
-  if (hospital){
+  if (hospital) {
     delay(3000);
     hospital = false;
   }
@@ -40,39 +45,39 @@ void draw() {
     shop = ash.atShop();
     hospital = ash.atHospital();
     if (shop) {
-     if (ash.getPokeDollars() > 50){
+      if (ash.getPokeDollars() > 50) {
         ash.addPokeBalls(ash.getPokeDollars()/50);
         ash.addPokeDollars(-(ash.getPokeDollars() - (ash.getPokeDollars()%50)));
       }
-      ash.setXY(432,160);
+      ash.setXY(432, 160);
       shopText();
     }
     if (hospital) {
       ash.heal();
-      ash.setXY(85,135);
+      ash.setXY(85, 135);
       hospitalText();
     }
   }
-  else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
-    battle.draw();
-  }
+} else if ( currentScreen.equals("shop") ) {
+  shop.draw();
+} else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
+  battle.draw();
 }
-
-void shopText(){
-  fill(255,255,255);
+}
+void shopText() {
+  fill(255, 255, 255);
   textSize(30);
-  text("Thanks for visiting the PokeShop", 10,30);
-  text("Pokeballs: " + ash.getPokeBalls(), 10,70);
+  text("Thanks for visiting the PokeShop", 10, 30);
+  text("Pokeballs: " + ash.getPokeBalls(), 10, 70);
   text("Pokedollars: " + ash.getPokeDollars(), 10, 110);
 }
 
-void hospitalText(){
-  fill(255,255,255);
+void hospitalText() {
+  fill(255, 255, 255);
   textSize(30);
-  text("Thanks for visiting the PokeCenter", 10,30);
-  text("Your pokemon now all have full hp", 10,70);
+  text("Thanks for visiting the PokeCenter", 10, 30);
+  text("Your pokemon now all have full hp", 10, 70);
 }
-
 void addWild() {
   _wild.push(new Machamp());
   _wild.push(new Ivysaur(true));
@@ -116,18 +121,20 @@ void addWild() {
   _wild.push(new Pidgey(true));
 }
 
-  void starter(){
-    _monsters.enqueue(new Squirtle(false));
-  }
-  void popup(){
-    while(!(ash.x > 0 && ash.x <575 && ash.y >285 && ash.y <315)||
-    (ash.x > 40 && ash.x <125 && ash.y >285 && ash.y <155)||
-    (ash.x > 285 && ash.x <315 && ash.y >125 && ash.y <575)||
-    (ash.x > 390 && ash.x <575 && ash.y >150 && ash.y <180)||
-    (ash.x > 545 && ash.x <475 && ash.y >150 && ash.y <300)||
-    (ash.x > 300 && ash.x <585 && ash.y >545 && ash.y <575)){
-      if(s%5==0){
-        battle.draw();
-    }
-    }
-  }
+void starter() {
+  Monsters start = new Squirtle(false);
+  _monsters.enqueue(start);
+}
+
+void popup() {
+  /*while (!(ash.x > 0 && ash.x <575 && ash.y >285 && ash.y <315)||
+   (ash.x > 40 && ash.x <125 && ash.y >285 && ash.y <155)||
+   (ash.x > 285 && ash.x <315 && ash.y >125 && ash.y <575)||
+   (ash.x > 390 && ash.x <575 && ash.y >150 && ash.y <180)||
+   (ash.x > 545 && ash.x <475 && ash.y >150 && ash.y <300)||
+   (ash.x > 300 && ash.x <585 && ash.y >545 && ash.y <575)) {*/
+  //if ( second() % 5 == 0) {
+  currentScreen = "battle";
+  //}
+}
+//}
