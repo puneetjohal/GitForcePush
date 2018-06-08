@@ -2,15 +2,24 @@
 APCS2 Pd2
 
 
-# Overview #
-  PokemonPond 
-  A simple Pokemon game adaption in processing, allowing for basic Pokemon catching and battling.  
+# PokemonPond #
+ A simple Pokemon game adaption in processing, where you can catch Pokemon or visit the local gym, hospital, or shop.
+ You can train your pokemon by fighting with wild pokemon, so that you can beat the local gym Pokemon.
 
-# How to Use #
-  Clone the Repo and go into Pokemon directory. Run Pokemon.pde with processing. On the starting screen, choose your starting pokemon. To move around the map, use arrow keys/mouse clicks. Pokemon will appear in grass areas with a random chance. To battle, click the move you want to use. You can catch wild Pokemon, but only 5 more. Go into the PokeCenter to heal for a fee, which you can earn by winning battles against wild Pokemon. If you run out of PokeBalls, you can buy them at the PokeMart. Once you have 6 Pokemon and you feel ready, you can go in to challenge the gym leader. Winning against gym leader will win you the game. 
+ 
+# How It Works #
+  Our projects uses processing methods, such as importing images, to replicate the environment of Pokemon games. We also uses
+  several abstract data structures , such as heaps and queues. The minHeap stores wild pokemon to ensure that the pokemon
+  encountered are catchable. The wild pokemon will appear when the player is on a location with grass. The queue stores the
+  pokemon that the player has caught so that the strongest pokemon will be sent out first to increase chances of victory. 
+  
+  There are also several visible buildings on the screen. When at the entrance of any of those buildings, the player
+  will be allowed to "enter" and access the features inside. For example, at the hospital, the player can heal their pokemon,
+  at the shop, you can buy or sell pokeballs, and at the gym, fight a boss pokemon.
 
-# To Do List #
-* Pokemon.pde creates world + sets up environment and player objects - starts the game
-* Building classes 
-* Player class 
-* Pokemon classes
+# Launch Instructions #
+1. Git Clone
+2. $ cd Pokemon
+3. $ processing Pokemon.pde
+4. Use arrow keys to move character
+5. Have fun!
