@@ -1,5 +1,4 @@
 Player ash;
-String name;
 PlayingScreen world;
 PharmScreen shop;
 
