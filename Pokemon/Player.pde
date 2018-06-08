@@ -8,12 +8,13 @@ class Player {
   String name;
   //Hashmap inventory;
   PImage front, back, left, right, face;
+  boolean shop, hospital, gym;
  
   Player(){
     x = 20;
     y = 300;
-    pokeBalls=0;
-    pokeDollars=0;
+    pokeBalls=10;
+    pokeDollars=100;
     front = loadImage("fash.png");
     back = loadImage("bash.png");
     left = loadImage("lash.png");
@@ -23,6 +24,9 @@ class Player {
     left.resize(30,30);
     right.resize(30,30);
     face = front;
+    shop = false;
+    hospital = false;
+    gym = false;
   }
   
   void display(){
@@ -51,6 +55,59 @@ class Player {
         }
       }
     }
+    boundary();
+    checkPos();
+  }
+  
+  void boundary(){
+    if (x > 600){
+      x--;
+    }
+    if (x < 0){
+      x++;
+    }
+    if (y > 600){
+      y--;
+    }
+    if (y < 0){
+      y++;
+    }
+  }
+  
+  void checkPos(){
+    if (x >= 400 && x <= 475){
+      if (y >= 75 && y<= 150){
+        shop = true;
+      }
+    }
+  }
+  
+  boolean atShop(){
+    return shop;
+  }
+  
+  boolean atHospital(){
+    return hospital;
+  }
+  
+  boolean atGym(){
+    return gym;
+  }
+  
+  void addPokeBalls(int x){
+    pokeBalls += x;
+  }
+  
+  void addPokeDollars(int x){
+    pokeDollars += x;
+  }
+  
+  int getPokeBalls(){
+    return pokeBalls;
+  }
+  
+  int getPokeDollars(){
+    return pokeDollars;
   }
   
 }
