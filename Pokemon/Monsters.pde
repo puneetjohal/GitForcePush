@@ -158,5 +158,5 @@ abstract class Monsters {
   }
 
   //To Be Implemented methods
-  abstract void evolve();
+  abstract Monsters evolve();
 }

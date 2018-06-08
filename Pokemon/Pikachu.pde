@@ -1,5 +1,5 @@
 class Pikachu extends Monsters {
- 
+
   Pikachu() {
     hp = 200;
     atk = 50;
@@ -7,8 +7,8 @@ class Pikachu extends Monsters {
     exp = 1000;
     PImage front = loadImage("fpikachu.png");
   }
-  
-  void evolve(){
-    
+
+  Monsters evolve() {
+    return null;
   }
 }

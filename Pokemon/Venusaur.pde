@@ -10,8 +10,9 @@ class Venusaur extends Ivysaur {
     back = loadImage("bvenusaur.png");
   }
   
-  
-  
+  Monsters evolve() {
+    return null;  
+  }
   
   
 }

@@ -10,7 +10,9 @@ class Golem extends Graveler {
     back = loadImage("bgolem.png");
   }
   
-  
+   Monsters evolve() {
+    return null;
+  }
   
   
   

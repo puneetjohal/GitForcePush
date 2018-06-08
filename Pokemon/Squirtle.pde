@@ -13,10 +13,8 @@ class Squirtle extends Monsters {
     back = loadImage("bsquirtle.png");
   }
   
-  void evolve(){
-    
+  Monsters evolve() {
+    Wartortle evov = new Wartortle(false);
+    return evov;
   }
-  
-  
-  
 }
