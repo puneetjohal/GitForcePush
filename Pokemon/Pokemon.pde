@@ -15,11 +15,12 @@ void setup(){
 
 void draw(){
   background(102,225,102);
-  //world.draw();
+  world.draw();
   ash.move();
   ash.display();
-  //if(ash.atShop()){
-  //  shop.draw();
-  //}
-  battle.draw();
+  if(ash.atShop()){
+    shop.draw();
+  }
+  if(ash.atGym()){
+  battle.draw();}
 }

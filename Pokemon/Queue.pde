@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class Queue<Monster>
 {
   LLNode<Monsters> _front;
@@ -68,25 +68,3 @@ class Queue<Monster>
     return _size;
   }
 }
-=======
-interface Queue<T> {
-
-    //~~~~~~~~~~~~~~~~~~begin AP subset~~~~~~~~~~~~~~~~~~
-    //means of removing an element from collection:
-    //Dequeues and returns the first element of the queue.
-    T dequeue();
-
-    //means of adding an element to collection:
-    //Enqueue an element onto the back of this queue.
-    void enqueue( T x );
-
-    //Returns true if this queue is empty, otherwise returns false.
-    boolean isEmpty();
-
-    //Returns the first element of the queue without dequeuing it.
-    T peekFront();
-    //~~~~~~~~~~~~~~~~~~~end AP subset~~~~~~~~~~~~~~~~~~~
-
-
-}//end interface Queue      
->>>>>>> 4083b0840dc761ae2bb97f3300826dc754903f9a
