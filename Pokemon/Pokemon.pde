@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+Player ash;
+PlayingScreen world;
+PharmScreen shop;
+BattleScreen battle;
+
+private Queue<Monsters> _monsters; 
+private Stack<Monsters> _opponents;
+
+void setup(){
+  size(600,600);
+  ash = new Player();
+  world = new PlayingScreen();
+  shop = new PharmScreen(ash);
+  battle = new BattleScreen(_monsters);
+}
+
+void draw(){
+  background(102,225,102);
+  world.draw();
+  ash.move();
+  ash.display();
+  if(ash.atShop()){
+    shop.draw();
+  }
+  if(ash.atGym()){
+  clear();
+  battle.draw();
+}
+
+  void popup()
+}
+=======
 Player ash;
 PlayingScreen world;
 PharmScreen shop;
@@ -32,3 +65,4 @@ void draw() {
     battle.draw();
   }
 }
+>>>>>>> 35bbd98f2dfe473341a27c83ccb9cb0610627fac
