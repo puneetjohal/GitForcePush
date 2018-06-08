@@ -5,12 +5,15 @@ class Player {
   int x;
   int y;
   String name;
+  int pokeDollars,pokeBalls;
   //Hashmap inventory;
   PImage front, back, left, right, face;
  
   Player(){
     x = 20;
     y = 300;
+    pokeDollars=100;
+    pokeBalls=10;
     front = loadImage("fash.png");
     back = loadImage("bash.png");
     left = loadImage("lash.png");
@@ -26,6 +29,8 @@ class Player {
     imageMode(CENTER);
     image(face,x,y);
   }
+  
+  
   
   void move(){
     if (keyPressed) {
