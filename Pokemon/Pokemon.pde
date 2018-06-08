@@ -2,6 +2,7 @@ Player ash;
 PlayingScreen world;
 PharmScreen shop;
 BattleScreen battle;
+static int pokeDollars, pokeBalls;
 
 static String currentScreen;
 
@@ -11,6 +12,8 @@ protected Stack<Monsters> _wild;
 void setup() {
   currentScreen = "game";
   size(600, 600);
+  pokeDollars = 500;
+  pokeBalls = 5; 
   ash = new Player();
   world = new PlayingScreen();
   shop = new PharmScreen(ash);

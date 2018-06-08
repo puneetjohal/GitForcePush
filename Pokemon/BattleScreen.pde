@@ -82,6 +82,7 @@ class BattleScreen {
       if ( yours.getExp() == 1000 ) {
         Pokemon.currentScreen = "win";
       } else {
+        pokeDollars += 50;
         mine.setExp( mine.getExp() + (yours.getExp() / 2) );
         if (mine.getExp() > 10 || mine.getExp() > 20) {
           input.enqueue(mine.evolve());
