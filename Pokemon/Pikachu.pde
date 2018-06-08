@@ -4,6 +4,7 @@ class Pikachu extends Monsters {
     hp = 200;
     atk = 50;
     def = 50;
+    exp = 1000;
     PImage front = loadImage("fpikachu.png");
   }
   
