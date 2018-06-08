@@ -87,7 +87,7 @@ class BattleScreen {
     } else if (mine.getHp() == 0 && next.getHp() == 0) {
       Pokemon.currentScreen = "lose";
     } else if (yours.getHp() == 0) {
-      if ( yours.getExp() == 1000 ) {
+      if ( Pokemon.currentScreen == "gym" ) {
         Pokemon.currentScreen = "win";
       } else {
         mine.setExp( mine.getExp() + (yours.getExp() / 2) );

@@ -28,7 +28,7 @@ void draw() {
     ash.display();
   } else if ( currentScreen.equals("shop") ) {
     shop.draw();
-  } else if ( currentScreen.equals("battle") ) {
+  } else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
     battle.draw();
   }
 }
