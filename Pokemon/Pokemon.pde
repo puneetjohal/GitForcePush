@@ -1,6 +1,5 @@
 Player ash;
 PlayingScreen world;
-PharmScreen shop;
 BattleScreen battle;
 static int pokeDollars, pokeBalls, s;
 boolean shop, hospital;
@@ -19,7 +18,6 @@ void setup() {
   pokeBalls = 5; 
   ash = new Player();
   world = new PlayingScreen();
-  shop = new PharmScreen(ash);
   addWild();
   starter();
   popup();
@@ -58,9 +56,7 @@ void draw() {
       hospitalText();
     }
   }
-} else if ( currentScreen.equals("shop") ) {
-  shop.draw();
-} else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
+ else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
   battle.draw();
 }
 }
