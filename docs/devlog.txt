@@ -4,7 +4,7 @@ Ricky Lin
 Kathleen Wong
 pd 2
 ---------------------
-<Project>
+Pokemon
 
 
 
@@ -33,6 +33,7 @@ Flesh out each category whenever necessary, appropriate.
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <Wow, we so BOSS bc...>
+We got the basic features of our project to work after going through so many hours of design changes and files with tons of lines of code that were just completely deleted in the end
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,24 +41,34 @@ UNRESOLVED ISSUES
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 >
-- Still need a project
-- How will we collect pokéballs?
-- How will the gym work?
-- Powerups?
+We weren't able to implement as many features as we would've liked too
+We weren't able to implement mouseclicked() properly
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <wow! oo! etc!...>
+We learned that processing is not just Java with graphics
+There are a lot of useful features of Processing, particularly the ones that allow for better user interaction!
+draw in processing works just like draw in netlogo
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We changed ___ to ___ bc...
 <etc>
 <etc>
+We decided to make the game much simpler than originally intended because our we couldn't get processing to handle what we wanted to do
+We made shop and hospital modify your inventory by themselves instead of being a full menu with buttons
+We decided to not have a gym because getting the different playing screens working together did not work out
+We decided to get rid of some interactive menus that required the use of a mouse
+We left out the use of hashmaps
+We did not make use of enough of the course material as we should've / probably could've
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <tales of wisdom gained...>
+Don't try to bite off more than you can chew
+If a project should take 5 hours expect it to take at least 10
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -101,8 +112,8 @@ Kathleen :: Added uml, flowchart
 
 2018-06-01
 --------------------------------------------------------------
-Ricky :: Updated plan, uml, and flowchart 
-Kathleen :: Updated plan, uml, and flowchart 
+Ricky :: Updated plan, uml, and flowchart
+Kathleen :: Updated plan, uml, and flowchart
 ==============================================================
 
 2018-06-03
@@ -110,3 +121,9 @@ Kathleen :: Updated plan, uml, and flowchart
 Kathleen :: Added png pictures for pokemons and buildings
 ==============================================================
 
+2018-06-08
+--------------------------------------------------------------
+Kathleen :: Worked on battle feature and adding Pokemon classes
+Ricky :: Worked on battle feature and adding Pokemon classes
+Puneet :: Worked on pokeshop and pokecenter, updated readme
+==============================================================
