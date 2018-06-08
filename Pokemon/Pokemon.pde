@@ -16,7 +16,7 @@ void draw(){
   world.draw();
   ash.move();
   ash.display();
-  if(ash.atShop()){
-    shop.draw();
-  }
+  //if(ash.atShop()){
+  //  shop.draw();
+  //}
 }
