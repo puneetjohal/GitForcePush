@@ -1,4 +1,4 @@
-interface Stack<MONSTERS> 
+interface Stack<Monsters> 
 {
     //Return true if this stack is empty, otherwise false.
     boolean isEmpty();

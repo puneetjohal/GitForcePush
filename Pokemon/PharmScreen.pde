@@ -6,8 +6,8 @@ class PharmScreen{
   PharmScreen(Player x){
     //ash = loadImage("fash.png");
    // ash.resize(50,50);
-    s = x.pokeBalls + "";
-    mon= x.pokeDollars + "";
+    s = pokeBalls + "";
+    mon= pokeDollars + "";
   }
   
   void draw(){

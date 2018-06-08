@@ -1,11 +1,11 @@
 import java.util.LinkedList;
 
-public class LLStack<MONSTERS> implements Stack<MONSTERS>{
+public class LLStack<Monsters> implements Stack<Monsters>{
 
-  private LinkedList<MONSTERS> _link;
+  private LinkedList<Monsters> _link;
 
   public LLStack() {
- _link = new LinkedList<MONSTERS>();
+ _link = new LinkedList<Monsters>();
    }
 
   //Return true if this stack is empty, otherwise false.
@@ -14,23 +14,23 @@ public class LLStack<MONSTERS> implements Stack<MONSTERS>{
   };
 
   //Return top element of stack without popping it.
-    MONSTERS peek(){
-    MONSTERS retVal = _link.getLast();
+    Monsters peek(){
+    Monsters retVal = _link.getLast();
     return retVal;
   };
 
   //Pop and return top element of stack.
-  public MONSTERS pop(){
+  public Monsters pop(){
     if(isEmpty()){
       return null;
     }
-    MONSTERS retVal = peek();
+    Monsters retVal = peek();
     _link.removeLast();
     return retVal;
   };
 
   //Push an element onto top of this stack.
-  public void  push( MONSTERS x ){
+  public void  push( Monsters x ){
     _link.add(x);
   }
 }

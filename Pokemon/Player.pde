@@ -32,7 +32,7 @@ class Player {
     image(face, x, y);
     if (ash.atShop()) {
       Pokemon.currentScreen = "shop";
-    } else if (ash.atGym() || encounter == true) {
+    } else if (ash.atGym() ) {
       Pokemon.currentScreen = "battle";
     }
   }

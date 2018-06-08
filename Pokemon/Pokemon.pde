@@ -17,6 +17,8 @@ void setup() {
   ash = new Player();
   world = new PlayingScreen();
   shop = new PharmScreen(ash);
+  popup();
+  starter();
   battle = new BattleScreen(_monsters, _wild);
   s=second();
   
@@ -78,6 +80,9 @@ void addWild() {
   _wild.push(new Pidgey(true));
 }
 
+  void starter(){
+    _monsters.enqueue(new Squirtle(false));
+  }
   void popup(){
     while(!(ash.x > 0 && ash.x <575 && ash.y >285 && ash.y <315)||
     (ash.x > 40 && ash.x <125 && ash.y >285 && ash.y <155)||
