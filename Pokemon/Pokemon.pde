@@ -4,6 +4,7 @@ PharmScreen shop;
 BattleScreen battle;
 
 private Queue<Monsters> _monsters; 
+private Stack<Monsters> _opponents;
 
 void setup(){
   size(600,600);
@@ -14,14 +15,17 @@ void setup(){
 }
 
 void draw(){
-  //background(102,225,102);
-  //world.draw();
-  //ash.move();
-  //ash.display();
-  //if(ash.atShop()){
-  //  shop.draw();
-  //}
-  //if(ash.atGym()){
-  //  clear();
+  background(102,225,102);
+  world.draw();
+  ash.move();
+  ash.display();
+  if(ash.atShop()){
+    shop.draw();
+  }
+  if(ash.atGym()){
+  clear();
   battle.draw();
+}
+
+  void popup()
 }
