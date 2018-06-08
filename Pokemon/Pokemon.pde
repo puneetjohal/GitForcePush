@@ -2,7 +2,7 @@ Player ash;
 PlayingScreen world;
 PharmScreen shop;
 BattleScreen battle;
-static int pokeDollars, pokeBalls;
+static int pokeDollars, pokeBalls,s;
 
 static String currentScreen;
 
@@ -18,6 +18,8 @@ void setup() {
   world = new PlayingScreen();
   shop = new PharmScreen(ash);
   battle = new BattleScreen(_monsters, _wild);
+  s=second();
+  
 }
 
 void draw() {
@@ -75,3 +77,16 @@ void addWild() {
   _wild.push(new Machop(true));
   _wild.push(new Pidgey(true));
 }
+
+  void popup(){
+    while(!(ash.x > 0 && ash.x <575 && ash.y >285 && ash.y <315)||
+    (ash.x > 40 && ash.x <125 && ash.y >285 && ash.y <155)||
+    (ash.x > 285 && ash.x <315 && ash.y >125 && ash.y <575)||
+    (ash.x > 390 && ash.x <575 && ash.y >150 && ash.y <180)||
+    (ash.x > 545 && ash.x <475 && ash.y >150 && ash.y <300)||
+    (ash.x > 300 && ash.x <585 && ash.y >545 && ash.y <575)){
+      if(s%5==0){
+        battle.draw();
+    }
+    }
+  }

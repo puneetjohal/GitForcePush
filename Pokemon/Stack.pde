@@ -4,12 +4,12 @@ interface Stack<MONSTERS>
     boolean isEmpty();
 
     //Return top element of stack without popping it.
-    T peek();
+    Monsters peek();
 
     //Pop and return top element of stack.
-    T pop();
+    Monsters pop();
 
     //Push an element onto top of this stack.
-    void push( T x );
+    void push( Monsters x );
 
 }//end interface

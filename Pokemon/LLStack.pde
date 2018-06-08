@@ -14,7 +14,7 @@ public class LLStack<MONSTERS> implements Stack<MONSTERS>{
   };
 
   //Return top element of stack without popping it.
-  public MONSTERS peek(){
+    MONSTERS peek(){
     MONSTERS retVal = _link.getLast();
     return retVal;
   };

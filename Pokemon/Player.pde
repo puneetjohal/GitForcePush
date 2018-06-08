@@ -7,7 +7,7 @@ class Player {
   String name;
   //Hashmap inventory;
   PImage front, back, left, right, face;
-  boolean shop, hospital, gym;
+  boolean shop, hospital, gym,grass;
 
   Player() {
     x = 20;
@@ -24,6 +24,7 @@ class Player {
     shop = false;
     hospital = false;
     gym = false;
+    grass=false;
   }
 
   void display() {
