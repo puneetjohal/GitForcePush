@@ -25,10 +25,12 @@ class BattleScreen{
   void draw(){
      
     rect(0,400,300,200,10,10,10,10);
-    rect(300,400,150,100,10,10,10,10);
-    rect(450,400,150,100,10,10,10,10);
-    rect(300,500,150,100,10,10,10,10);
-    rect(450,500,150,100,10,10,10,10);
+    rect(300,400,150,66,10,10,10,10);
+    rect(450,400,150,66,10,10,10,10);
+    rect(300,466,150,66,10,10,10,10);
+    rect(450,466,150,66,10,10,10,10);
+    rect(300,532,150,66,10,10,10,10);
+    rect(450,532,150,66,10,10,10,10);
    display();
   }
   
@@ -41,8 +43,10 @@ class BattleScreen{
     textSize(20);
     text(s1 , 325 , 425);
     text(s1 , 475 , 425);
-    text(s1 , 325 , 525);
-    text(s1 , 475 , 525);
+    text(s1 , 325 , 490);
+    text(s1 , 475 , 490);
+    text("Catch" , 325 , 560);
+    text("Run" , 475 , 560);
     textSize(40);
     text("What will", 50,450);
     //text(name +"do?", 50,525);
@@ -50,14 +54,18 @@ class BattleScreen{
   }
   
   void mouseClicked(){
-    if(mouseX>300 && mouseX<450 && mouseY>400 && mouseY<500){
+    if(mouseX>300 && mouseX<450 && mouseY>400 && mouseY<466){
       moveChosen =s1;}
-     if(mouseX>450 && mouseX<600 && mouseY>400 && mouseY<500){
+     if(mouseX>450 && mouseX<600 && mouseY>400 && mouseY<466){
       moveChosen =s2;}
-      if(mouseX>300 && mouseX<450 && mouseY>500 && mouseY<600){
+      if(mouseX>300 && mouseX<450 && mouseY>466 && mouseY<532){
       moveChosen =s3;}
-      if(mouseX>450 && mouseX<600 && mouseY>500 && mouseY<600){
+      if(mouseX>450 && mouseX<600 && mouseY>466 && mouseY<532){
       moveChosen =s4;}
+      if(mouseX>300 && mouseX<450 && mouseY>532 && mouseY<600){
+      moveChosen ="catch";}
+      if(mouseX>450 && mouseX<600 && mouseY>532 && mouseY<600){
+      moveChosen ="run";}
       
   }
   
