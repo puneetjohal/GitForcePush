@@ -17,7 +17,7 @@ abstract class Monsters {
   float getHp() {
     return hp;
   }
-  
+
   float getMaxHp() {
     return maxHp;
   }
@@ -132,27 +132,31 @@ abstract class Monsters {
   }
 
   //Attack method 
+
+  void attack (Monsters other) {
+    other.setHp( other.getHp() - ( (random(0, 1) * atk) - (0.5 * (other.getDef()) ) ) );
+  }
+
   void attack (Monsters other, String command) {
-    
+
     float dmg = 0; 
     float multi = typeMultiplier(other);
-    
+
     if ( command.equals("Tackle") || command.equals("Headbutt") || command.equals("Scratch") ) {
       dmg = ( (.2 + multi ) * atk ) - (0.5 *( other.getDef()) );
-      other.setHp( other.getHp() - dmg ); 
-    }
-    else if (command.equals("Flamethrower") || command.equals("Aerial Ace") || command.equals("Water Gun") || command.equals("Jump Kick") || command.equals("Razor Leaf") || command.equals("Rock Slide") ) {
+      other.setHp( other.getHp() - dmg );
+    } else if (command.equals("Flamethrower") || command.equals("Aerial Ace") || command.equals("Water Gun") || command.equals("Jump Kick") || command.equals("Razor Leaf") || command.equals("Rock Slide") ) {
       dmg = ( (.5 + multi ) * atk ) - (0.5 * ( other.getDef()) );
-      other.setHp( other.getHp() - dmg );     }
-    else if (command.equals("Inferno") || command.equals("Brave Bird") || command.equals("Hydro Pump") || command.equals("Close Combat") || command.equals("Solar Beam") || command.equals("Earthquake") ) {
+      other.setHp( other.getHp() - dmg );
+    } else if (command.equals("Inferno") || command.equals("Brave Bird") || command.equals("Hydro Pump") || command.equals("Close Combat") || command.equals("Solar Beam") || command.equals("Earthquake") ) {
       dmg = ( (1 + multi ) * atk ) - (0.5 * ( other.getDef()) );
-      other.setHp( other.getHp() - dmg );     }
-    else if (command.equals("Growl") || command.equals("Tail Whip") || command.equals("Scary Face") ) {
+      other.setHp( other.getHp() - dmg );
+    } else if (command.equals("Growl") || command.equals("Tail Whip") || command.equals("Scary Face") ) {
       other.setAtk( other.getAtk() * .7 );
       other.setDef( other.getDef() * .7 );
-    } 
+    }
   }
-  
-    //To Be Implemented methods
-    abstract void evolve();
+
+  //To Be Implemented methods
+  abstract void evolve();
 }

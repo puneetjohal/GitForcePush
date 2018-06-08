@@ -32,6 +32,12 @@ class Player {
   void display(){
     imageMode(CENTER);
     image(face,x,y);
+    if (ash.atShop()) {
+      Pokemon.currentScreen = "shop";
+    }
+    else if (ash.atGym() || encounter == true) {
+      Pokemon.currentScreen = "battle";
+    }
   }
   
   void move(){
