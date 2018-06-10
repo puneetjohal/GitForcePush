@@ -2,7 +2,8 @@ Player ash;
 PlayingScreen world;
 BattleScreen battle;
 static int pokeDollars, pokeBalls, s;
-boolean shop, hospital, battle;
+boolean shop, hospital, isbattle;
+String poke;
 
 static String currentScreen;
 
@@ -23,7 +24,7 @@ void setup() {
   popup();
   battle = new BattleScreen(_monsters, _wild);
   s = second();
-  shop = hospital = battle = false;
+  shop = hospital = isbattle = false;
 }
 
 void draw() {
@@ -35,9 +36,9 @@ void draw() {
     delay(3000);
     hospital = false;
   }
-  if (battle) {
+  if (isbattle) {
     delay(3000);
-    battle = false;
+    isbattle = false;
   }
   if (ash.getHP() < 0){
     background(0,0,0);
@@ -54,10 +55,10 @@ void draw() {
     shop = ash.atShop();
     hospital = ash.atHospital();
     if (random(50) == 0){
-      battle = true;
+      isbattle = true;
     }
     if (shop) {
-      battle = false;
+      isbattle = false;
       if (ash.getPokeDollars() > 50) {
         ash.addPokeBalls(ash.getPokeDollars()/50);
         ash.addPokeDollars(-(ash.getPokeDollars() - (ash.getPokeDollars()%50)));
@@ -66,15 +67,15 @@ void draw() {
       shopText();
     }
     if (hospital) {
-      battle = false;
+      isbattle = false;
       ash.heal();
       ash.setXY(85, 135);
       hospitalText();
     }
     
-    if (battle) {
-      num = random(0,3);
-      String poke;
+    if (isbattle) {
+       int num = (int)random(0,3);
+     // String poke;
       if (num == 0){ poke = "Squirtle";}
       if (num == 1){ poke = "Charmander";}
       if (num == 2){ poke = "Bulbasaur";}
@@ -85,13 +86,13 @@ void draw() {
       if (win) {
         pokeDollars += 30;
         pokeBalls -= 1;
-        ash.lowerHp(random(10));
+        ash.decreaseHP((int)random(10));
       }
       else {
         pokeDollars += 10;
-        ash.lowerHP(random(20));
+        ash.decreaseHP((int)random(20));
       }
-      battleText(poke, win);
+      battleText(poke, win);}
   //}
  /*else if ( currentScreen.equals("battle") || currentScreen.equals("gym") ) {
   battle.draw();
@@ -116,14 +117,14 @@ void hospitalText() {
 void battleText(String s, boolean b) {
   fill(255, 255, 255);
   textSize(30);
-  text("You had a battle with " + s, 10 30);
+  text("You had a battle with " + s, 10 ,30);
   if (b){
     text(s + " was captured!", 10, 70);
-    text("HP: " + ash.getHP(), 10 110);
+    text("HP: " + ash.getHP(), 10, 110);
   }
   else{
     text(s + " ran away", 10, 70);
-    text("HP: " + ash.getHP(), 10 110);
+    text("HP: " + ash.getHP(), 10 ,110);
   }
 }
 
